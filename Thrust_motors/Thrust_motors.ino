@@ -14,6 +14,7 @@ void setup() {
   //Declaring LED pin as output
   pinMode(PWMPIN, OUTPUT);
   pinMode(ENPIN, OUTPUT);
+  pinMode(DIRPIN, OUTPUT);
   Serial.begin(9600);
     
     while(!Serial){};
@@ -27,6 +28,7 @@ void setup() {
 }
 int time = millis();
 void loop() {
+  digitalWrite(ENPIN, LOW);
     unsigned char len = 0;
     unsigned char buf[2];
   if (CAN_MSGAVAIL == CAN.checkReceive()) {         // check if data coming

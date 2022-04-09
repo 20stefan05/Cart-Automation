@@ -1,6 +1,8 @@
 #include "Thrust.h"
 int DIR = 1;
 void mvForward(int speed){
+  //digitalWrite(ENPIN, LOW);
+  delay(100);
   int speedToMotor = map(speed, 0, 10, 0, 255);
   if(DIR==1)
       analogWrite(PWMPIN, abs(speedToMotor));
@@ -14,6 +16,8 @@ void mvForward(int speed){
       Serial.println(speed);  
 }
 void mvBackward(int speed){
+    //digitalWrite(ENPIN, LOW);
+    delay(100);
   int speedToMotor = map(speed, 0, 10, 0, 255);
 //      analogWrite(PWMPIN, abs(speedToMotor)); 
 //      Serial.println(speed); 
@@ -29,5 +33,8 @@ void mvBackward(int speed){
 }
 void stop(){
   analogWrite(PWMPIN, 0);
+  delay(100);
+  //digitalWrite(ENPIN, HIGH);
+
 }
 //de lucrat la schimbarea directiei!

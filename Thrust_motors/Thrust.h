@@ -2,9 +2,9 @@
 #define THRUST_H
 
 #include "Arduino.h"
-#define PWMPIN 6
-#define ENPIN 10
-#define DIRPIN 11
+#define PWMPIN 8
+#define ENPIN 9
+#define DIRPIN 10
 void mvForward(int speed);
 void mvBackward(int speed);
 void stop();
