@@ -5,7 +5,7 @@
 
 // Set SPI CS Pin according to your hardware
 
-const int SPI_CS_PIN = 53;
+const int SPI_CS_PIN = 10;
 const int CAN_INT_PIN = 2;
 
 mcp2515_can CAN(SPI_CS_PIN); // Set CS pin  

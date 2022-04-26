@@ -9,7 +9,8 @@ void mvForward(int speed){
   else{
     DIR=1;
     analogWrite(PWMPIN, 0);
-    digitalWrite(DIRPIN, LOW);
+    digitalWrite(DIRPIN, LOW);\
+    delay(100);
     analogWrite(PWMPIN, abs(speedToMotor));
 
   }
@@ -27,6 +28,7 @@ void mvBackward(int speed){
     DIR=0;
     analogWrite(PWMPIN, 0);
     digitalWrite(DIRPIN, HIGH);
+    delay(100);
     analogWrite(PWMPIN, abs(speedToMotor));
 
   }
